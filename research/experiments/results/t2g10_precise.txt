@@ -1,0 +1,6 @@
+Biq Mac t2g10_5555 (n=100, 10x10 torus, weights up to ~1e5), MAX-CUT order 2, correlative-sparsity cliques (73 blocks, largest 301)
+moment_sos solve, DEFAULT_ETAS, 500 it/stage (converged, see sparse_t2g10*.log): 6197187 (+2.4% vs TSSOS), 545 s with 2500 it/stage
+moment_sos solve, PRECISE_ETAS, 500 it/stage, time limit 1500 s: 6049691.05 in 264.1 s
+TSSOS (CS MF, MOSEK, Julia 1.13.3): 6049460.98 in 42.4 s, peak memory ~11 GB
+relative difference PRECISE vs TSSOS: 3.8e-5
+moment_sos solve_alm, default settings (no warm start, rho0=1000, inner=600), time limit 900 s: 6762402.9 after 980.6 s (+11.8% vs TSSOS); only ~6 outer iterations (~70 s each; 73 blocks of size up to 301)

@@ -1,0 +1,32 @@
+\begin{tabular}{l c r r r r r r r c}\toprule
+Problem & $r$ & $s$ & $U$ & $U_{\rm rig}-U$ & $E$ & max eig.\ slack & $t_{\rm chol}$ [s] & $t_{\rm res}$ [s] & certified? \\\midrule
+ball & 2 & 3 & 1.000000 & $3.0\times10^{-11}$ & $1.3\times10^{-14}$ & $1.0\times10^{-11}$ & 0.000 & 0.000 & -- \\
+disk & 2 & 6 & 1.414217 & $6.0\times10^{-13}$ & $6.0\times10^{-13}$ & $3.5\times10^{-11}$ & 0.000 & 0.000 & -- \\
+sphere (eq.) & 2 & 6 & 1.414214 & $4.0\times10^{-14}$ & $4.0\times10^{-14}$ & $1.0\times10^{-12}$ & 0.000 & 0.000 & -- \\
+MAX-CUT K3 & 1 & 4 & 2.250003 & $2.3\times10^{-10}$ & $9.5\times10^{-18}$ & $5.6\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=2$) \\
+MAX-CUT K3 & 2 & 7 & 2.000004 & $2.0\times10^{-10}$ & $1.1\times10^{-15}$ & $2.9\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=2$) \\
+MAX-CUT K3 & 3 & 8 & 2.000000 & $2.0\times10^{-10}$ & 0 & $2.5\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=2$) \\
+MAX-CUT C5 & 1 & 6 & 4.522545 & $4.5\times10^{-10}$ & $6.5\times10^{-16}$ & $7.5\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=4$) \\
+MAX-CUT C5 & 2 & 16 & 4.000053 & $4.0\times10^{-10}$ & $8.3\times10^{-14}$ & $2.5\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=4$) \\
+MAX-CUT C5 & 3 & 26 & 4.000034 & $4.0\times10^{-10}$ & $1.2\times10^{-14}$ & $1.5\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=4$) \\
+MAX-CUT K5 & 1 & 6 & 6.250002 & $6.3\times10^{-10}$ & $2.4\times10^{-16}$ & $1.0\times10^{-10}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=6$) \\
+MAX-CUT K5 & 2 & 16 & 6.250021 & $6.3\times10^{-10}$ & $2.2\times10^{-14}$ & $3.9\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=6$) \\
+MAX-CUT K5 & 3 & 26 & 6.000032 & $6.0\times10^{-10}$ & $3.3\times10^{-14}$ & $2.3\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=6$) \\
+MAX-CUT Petersen & 1 & 11 & 12.500009 & $1.3\times10^{-9}$ & $7.5\times10^{-16}$ & $1.1\times10^{-10}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=12$) \\
+MAX-CUT Petersen & 2 & 56 & 12.000124 & $1.2\times10^{-9}$ & $2.5\times10^{-12}$ & $2.1\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=12$) \\
+MAX-CUT K7 & 1 & 8 & 12.250001 & $1.2\times10^{-9}$ & $2.7\times10^{-15}$ & $1.5\times10^{-10}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=12$) \\
+MAX-CUT K7 & 2 & 29 & 12.250021 & $1.2\times10^{-9}$ & $1.1\times10^{-13}$ & $4.2\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=12$) \\
+MAX-CUT K7 & 3 & 64 & 12.250100 & $1.2\times10^{-9}$ & $1.4\times10^{-13}$ & $1.9\times10^{-11}$ & 0.000 & 0.001 & yes ($\lfloor U_{\rm rig}\rfloor=12$) \\
+MAX-CUT reg3-12 & 1 & 13 & 16.000005 & $1.6\times10^{-9}$ & $2.1\times10^{-14}$ & $1.2\times10^{-10}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=16$) \\
+MAX-CUT reg3-12 & 2 & 79 & 16.000102 & $1.6\times10^{-9}$ & $3.6\times10^{-12}$ & $2.0\times10^{-11}$ & 0.000 & 0.001 & yes ($\lfloor U_{\rm rig}\rfloor=16$) \\
+box QP n=5 (seed 1) & 2 & 21 & 8.611096 & $2.9\times10^{-11}$ & $1.5\times10^{-12}$ & $3.9\times10^{-11}$ & 0.000 & 0.000 & -- \\
+box QP n=5 (seed 2) & 2 & 21 & 10.852148 & $2.8\times10^{-11}$ & $5.9\times10^{-12}$ & $3.5\times10^{-11}$ & 0.000 & 0.000 & -- \\
+chain quartic n=8 (sparse) & 2 & 6 & 2.014187 & $5.2\times10^{-11}$ & $7.4\times10^{-13}$ & $1.4\times10^{-11}$ & 0.001 & 0.000 & -- \\
+chain quartic n=8 (dense) & 2 & 45 & 2.014266 & $6.6\times10^{-11}$ & $9.7\times10^{-13}$ & $3.5\times10^{-12}$ & 0.001 & 0.001 & -- \\
+MAX-CUT reg3 n=10 & 2 & 56 & 12.000174 & $1.2\times10^{-9}$ & $1.2\times10^{-12}$ & $2.1\times10^{-11}$ & 0.000 & 0.000 & yes ($\lfloor U_{\rm rig}\rfloor=12$) \\
+MAX-CUT reg3 n=14 & 2 & 106 & 19.000019 & $1.9\times10^{-9}$ & $4.1\times10^{-12}$ & $1.8\times10^{-11}$ & 0.001 & 0.001 & yes ($\lfloor U_{\rm rig}\rfloor=19$) \\
+MAX-CUT reg3 n=20 & 2 & 211 & 26.000957 & $2.7\times10^{-9}$ & $5.0\times10^{-12}$ & $1.3\times10^{-11}$ & 0.002 & 0.005 & yes ($\lfloor U_{\rm rig}\rfloor=26$) \\
+MAX-CUT reg3 n=26 & 2 & 352 & 36.000032 & $3.8\times10^{-9}$ & $1.0\times10^{-11}$ & $1.1\times10^{-11}$ & 0.006 & 0.016 & yes ($\lfloor U_{\rm rig}\rfloor=36$) \\
+MAX-CUT reg3 n=30 & 2 & 466 & 40.002593 & $4.4\times10^{-9}$ & $9.7\times10^{-12}$ & $9.5\times10^{-12}$ & 0.12 & 0.10 & yes ($\lfloor U_{\rm rig}\rfloor=40$) \\
+MAX-CUT reg3 n=40 & 2 & 821 & 54.006422 & $7.2\times10^{-9}$ & $1.8\times10^{-11}$ & $8.8\times10^{-12}$ & 0.068 & 0.14 & yes ($\lfloor U_{\rm rig}\rfloor=54$) \\
+\bottomrule\end{tabular}

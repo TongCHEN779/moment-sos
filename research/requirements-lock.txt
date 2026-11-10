@@ -1,0 +1,11 @@
+clarabel==0.11.1
+cvxpy==1.9.1
+matplotlib==3.10.7
+Mosek==11.2.2
+networkx==3.5
+numpy==2.4.6
+pandas==2.3.3
+pytest==9.1.1
+scipy==1.16.3
+scs==3.2.11
+torch==2.9.0

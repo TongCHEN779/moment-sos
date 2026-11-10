@@ -1,0 +1,13 @@
+% Part B: box QP (seed 1), r=2 -- 'with box constraints + uniform shift' (n+1 blocks) vs 'no box constraints + diagonal shift' (1 block)
+\begin{tabular}{c r r r r r r r r r r}\toprule
+ & \multicolumn{4}{c}{with box, uniform shift} & \multicolumn{4}{c}{no box, diagonal shift} & \multicolumn{2}{c}{bound} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-11}
+$n$ & blocks & mult. & smoothing $U$ (s) & ALM $U$ (s) & blocks & mult. & shifts & ALM $U^{\rm d}$ (s) & IPM $\rho_2^{\rm tr}$ & IPM $\rho_2^{\rm d}$ \\\midrule
+4 & 5 & 181 & 6.33738 (0.2) & 6.33737 (0.4) & 1 & 121 & 15 & 6.33737 (0.2) & 6.33737 & 6.33737 \\
+5 & 6 & 337 & 8.61110 (0.2) & 8.61101 (1.2) & 1 & 232 & 21 & 8.61100 (3.1) & 8.61100 & 8.61100 \\
+6 & 7 & 575 & 15.44530 (0.8) & 15.44526 (33.3) & 1 & 407 & 28 & 15.44526 (8.3) & 15.44526 & 15.44526 \\
+7 & 8 & 919 & 14.75861 (13.5) & 14.75852 (118.7) & 1 & 667 & 36 & 14.75852 (82.5) & 14.75851 & 14.75851 \\
+8 & 9 & 1396 & 23.15104 (3.2) & 23.15096 (32.0) & 1 & 1036 & 45 & 23.15096 (59.3) & 23.15096 & 23.15096 \\
+9 & 10 & 2036 & 33.89219 (5.1) & 33.89218 (53.2) & 1 & 1541 & 55 & 33.89218 (41.4) & 33.89218 & 33.89218 \\
+10 & 11 & 2872 & 44.91238 (18.0) & 44.91235 (55.3) & 1 & 2212 & 66 & 44.91235 (66.4) & 44.91235 & 44.91235 \\
+\bottomrule\end{tabular}

@@ -1,0 +1,4 @@
+load 3.03955078125 block 1276
+n=50: certified optimal (floor U = 68) after 34.562297667143866s (130 evals); best U 68.0569; total 263s; recheck 68.0569
+load 3.3916015625 block 1831
+n=60: certified optimal (floor U = 81) after 218.3121819999069s (330 evals); best U 81.1939; total 620s; recheck 81.1939

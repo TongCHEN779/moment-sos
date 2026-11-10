@@ -1,0 +1,39 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  python:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "${{ matrix.python }}"}
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+        if: runner.os == 'Linux'
+      - run: pip install -e ".[test]"
+      - run: pytest -q --ignore=tests/test_docs_examples.py
+  docs-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e ".[test]"
+      - run: pytest -q tests/test_docs_examples.py
+  julia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e .
+      - uses: julia-actions/setup-julia@v2
+        with: {version: "1.10"}
+      - run: julia --project=julia/MomentSOS -e 'using Pkg; Pkg.instantiate(); Pkg.test()'
+        env: {MOMENT_SOS_PYTHON: python}

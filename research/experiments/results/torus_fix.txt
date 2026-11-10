@@ -1,0 +1,4 @@
+# short schedule eta = 1e-3,3e-4,1e-4,3e-5,1e-5,3e-6,1e-6 with 2000 L-BFGS iterations per stage, weighted grid n=36 (instances that were not certified with 500 iterations per stage)
+seed 1 iters/stage 2000: LB 2515 final U 2515.000 (gap 0.00); certified after 76.96170008298941s (1099 evals); total 127s
+seed 3 iters/stage 2000: LB 2996 final U 2996.001 (gap 0.00); certified after 78.56974604097195s (1130 evals); total 132s
+seed 5 iters/stage 2000: LB 1794 final U 1794.000 (gap 0.00); certified after 60.648907124996185s (907 evals); total 113s

@@ -1,0 +1,7 @@
+6x6 torus, random +-1 weights (numpy default_rng(0)), MAX-CUT, order 2, best cut 30 (local search); smoothing solver, time limit 300 s
+dense blocks 1 max 667 bound 30.3389 t 156.1
+CS auto blocks 24 max 92 bound 30.2043 t 27.7
+TS 1 blocks 422 max 212 bound 33.8528 t 302.2
+CS+TS 1 blocks 566 max 5 bound 34.7151 t 67.4
+CS+TS 2 blocks 440 max 9 bound 32.0357 t 77.3
+CS+TS max blocks 404 max 11 bound 32.0189 t 53.4

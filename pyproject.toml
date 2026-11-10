@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moment-sos"
+version = "0.1.0"
+description = "Polynomial optimization with certified, anytime, first-order moment-SOS bounds in PyTorch"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Tong Chen"}]
+license = {text = "MIT"}
+dependencies = ["numpy>=1.22", "scipy>=1.9", "torch>=2.0", "networkx>=2.8"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+keywords = ["polynomial optimization", "moment-SOS", "Lasserre hierarchy", "semidefinite programming", "certified bounds", "PyTorch"]
+
+[project.urls]
+Documentation = "https://tongchen779.github.io/moment-sos/"
+Source = "https://github.com/TongCHEN779/moment-sos"
+
+[project.scripts]
+moment-sos = "moment_sos.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest", "cvxpy", "clarabel"]
+examples = ["matplotlib"]
+docs = ["sphinx>=7", "furo", "myst-parser", "sphinx-copybutton", "sphinx-design"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+moment_sos = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

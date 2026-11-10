@@ -1,0 +1,12 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+*.pyc
+.venv*/
+build/
+dist/
+*.egg-info/
+docs/_build/
+julia/*/Manifest.toml
+__pycache__/
+.pytest_cache/

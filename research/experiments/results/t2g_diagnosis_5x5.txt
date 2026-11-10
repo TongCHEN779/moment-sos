@@ -1,0 +1,7 @@
+5x5 torus, integer weights ~1e5*N(0,1) (default_rng(7)), file research/experiments/tssos/t2g5_like.txt, MAX-CUT order 2, correlative cliques
+TSSOS (CS MF, MOSEK): 671076.9998923 (15 cliques, max 11), 30.5 s incl. Julia start-up
+moment_sos relaxation (16 cliques, max 10), exact IPM on our dual: 671076.8754715 (7.3 s)
+moment_sos solve (smoothing, DEFAULT_ETAS, 200 s limit): 672577.238 (error +1500.4, 2.2e-3 relative), 21.4 s
+moment_sos solve (smoothing, PRECISE_ETAS = DEFAULT + 3e-6,1e-6,3e-7,1e-7): 671086.801 (error +9.93, 1.5e-5 relative), 28.8 s
+moment_sos solve_alm (no warm start, 200 s limit): 671077.0005 (error +0.125), 37.1 s
+smoothing then solve_alm(theta0=smoothing result): 671077.0006 (error +0.125), 41.1 s total after smoothing

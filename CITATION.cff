@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "moment-sos: certified first-order bounds for polynomial optimization in PyTorch"
+message: "If you use this software, please cite it as below."
+type: software
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Chen
+    given-names: Tong
+repository-code: "https://github.com/TongCHEN779/moment-sos"
+abstract: "Builds the order-r moment-SOS relaxation of a polynomial optimization problem and computes anytime, certified upper bounds from its dual with first-order methods."
+keywords: [polynomial optimization, moment-SOS, semidefinite programming, certified bounds, PyTorch]
