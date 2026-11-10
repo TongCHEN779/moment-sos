@@ -217,12 +217,12 @@ def lipschitz_exact_pattern(W0, W1):
 
 
 def lipsdp_neuron(W0, W1):
-    """LipSDP-Neuron bound (Fazlyab et al. 2019) on the squared Lipschitz constant, via cvxpy/MOSEK."""
+    """LipSDP-Neuron bound (Fazlyab et al. 2019) on the squared Lipschitz constant, via cvxpy (MOSEK if installed, else Clarabel)."""
     import cvxpy as cp
     w, d = W0.shape
     rho = cp.Variable(); T = cp.Variable(w, nonneg=True)
     Tm = cp.diag(T)
     M = cp.bmat([[-rho * np.eye(d), W0.T @ Tm], [Tm @ W0, W1.T @ W1 - 2 * Tm]])
     prob = cp.Problem(cp.Minimize(rho), [(M + M.T) / 2 << 0])
-    prob.solve(solver=cp.MOSEK)
+    prob.solve(solver="MOSEK" if "MOSEK" in cp.installed_solvers() else "CLARABEL")
     return float(rho.value)
