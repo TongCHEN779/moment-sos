@@ -1,5 +1,8 @@
 name: CI
-on: [push, pull_request]
+on:
+  push: {branches: ["**"]}      # tags are covered by release.yml, which calls this workflow
+  pull_request:
+  workflow_call:                   # lets release.yml require a green CI before publishing
 jobs:
   python:
     runs-on: ${{ matrix.os }}

@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-11-11)
 - Package renamed `moment-sos` (import `moment_sos`).
 - Polynomial front end (`variables`, `Problem`), automatic box normalisation, mixed Boolean/continuous variables.
 - Sparse moment-SOS relaxation builder (`Relaxation`), correlative-sparsity cliques (`cliques="auto"`).

@@ -1,5 +1,10 @@
 # moment-sos
 
+[![PyPI](https://img.shields.io/pypi/v/moment-sos)](https://pypi.org/project/moment-sos/)
+[![CI](https://github.com/TongCHEN779/moment-sos/actions/workflows/ci.yml/badge.svg)](https://github.com/TongCHEN779/moment-sos/actions/workflows/ci.yml)
+[![Docs](https://github.com/TongCHEN779/moment-sos/actions/workflows/docs.yml/badge.svg)](https://tongchen779.github.io/moment-sos/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Certified first-order bounds for polynomial optimization, in PyTorch (with a Julia interface and a command line tool).
 
 Write a polynomial optimization problem in a few lines. `moment-sos` builds its order-`r` moment–SOS (Lasserre)
@@ -17,13 +22,15 @@ print(res)
 x_hat, value = res.round()             # a feasible point: the other side of the gap
 ```
 
-**Documentation:** see `docs/` (Sphinx; build with `sphinx-build -W docs docs/_build/html`) — installation, user guide,
-theory summary, API reference, and a benchmarks page that states where the package does *not* win.
+**Documentation:** <https://tongchen779.github.io/moment-sos/> — installation, user guide, tutorials, theory summary,
+API reference, and a benchmarks page that states where the package does *not* win. (Source in `docs/`; build with
+`sphinx-build -W docs docs/_build/html`.)
 
 ## Install
 
 ```bash
-pip install moment-sos          # PyPI release pending; for now: pip install -e ".[test]" from a checkout
+pip install moment-sos
+pip install -e ".[test]"        # from a checkout, to run the tests
 ```
 
 ## Interfaces
@@ -47,8 +54,11 @@ moderate (1e-3–1e-4); neural-network relaxations of about 40 unstable neurons 
 
 ## Status
 
-Version 0.1.0 (alpha). 18 tests; documentation examples are executed by the test suite. Not yet tested: GPU, Windows.
-The CI workflows in `.github/workflows` have not been run (they need a GitHub repository).
+Version 0.1.0 (alpha), released on PyPI. The test suite (library, triangle walk, and every Python block of the
+documentation) runs in CI on Linux and macOS with Python 3.9, 3.11 and 3.12 (CPU only). Not tested: GPU, Windows.
+The Julia package is not yet in the General registry; install it from this repository with
+`Pkg.add(url="https://github.com/TongCHEN779/moment-sos", subdir="julia/MomentSOS")` (Python and `moment-sos` must be
+on the path).
 
 ## Citation and license
 
